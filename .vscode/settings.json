@@ -1,0 +1,66 @@
+{
+    "latex-workshop.latex.autoClean.run": "never",
+    "latex-workshop.latex.clean.method": "command",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        // "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk"
+    ],
+    "latex-workshop.latex.clean.subfolder.enabled": false,
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "Custom Index Build",
+            "tools": [
+                "makeindex",
+                "pdflatex",
+                "clean"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "makeindex",
+            "command": "makeindex",
+            "args": [
+                "%DOCFILE%.idx",
+                "-s",
+                "lib/std.ist"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "clean",
+            "command": "rm",
+            "args": [
+                "%DOCFILE%.ilg",
+                "%DOCFILE%.ind",
+                "%DOCFILE%.aux",
+                "%DOCFILE%.synctex.gz"
+            ]
+        }
+    ]
+}

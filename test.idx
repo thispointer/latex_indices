@@ -1,0 +1,107 @@
+\comment{ AUTHOR : Bert Taeymans
+
+USER DEFINED COMMANDS AND SPECIAL SYNTAX
+  a. Add a blank line between paragraphs : \blankline
+       Syntax in .idx file : \indexentry{...@\blankline|comment}{0}
+
+  b. Insert a page break : (standard) \newpage
+       Syntax in .idx file : \indexentry{...@\blankline|newpage \comment}{0}
+
+  c. Fills page number with book name : \book{x}
+       Syntax in .idx file : \indexentry{...|book{x}}{...}
+          with x = nbr of the book to display in the page number with format : [BOOKNAME][x]
+          Example : SANS SEC504 book ->  504.1--1-10
+                                     =======
+  d. Insert an entry rank : \rate{x}
+       Syntax in .idx file : \indexentry{... \rate{x}|...}{...}
+          with x = # of \star's to display between item and dotfill before page number
+          
+  e. Insert an entry with special style : \indexentry{my_entry@\text..{my_entry}|...}{...}
+       Before '@' is for indexing, after is what will be displayed
+  
+  NB :
+    - ... = sorting key
+    - \blankline is defined in the .tex file and fills the line with space
+    - \rank is defined in the .tex file and uses a the forloop package to repeat x times \star
+    - comment style (behind "|") will act as a \comment command, commenting the page number "{0}"
+
+
+*****************************************************************************************************
+                                          TOPICS SECTION
+*****************************************************************************************************
+ Sort entries consist of a number and a letter to be inserted in the standard 'Symbols' section }
+ 
+\indexentry{0a@\includegraphics[width=\linewidth]{overview.png}|comment}{0}
+\indexentry{0ba@\textbf{Defensible Network Architecture}: \newline \textbf{M}onitored, \textbf{I}nventoried, \textbf{C}ontrolled, \textbf{C}laimed, \textbf{M}inimized, \textbf{A}ssessed, \textbf{C}urrent\blankline|comment}{0}
+\indexentry{0c@\textbf{Mindset}: \textit{Build it once, build it right.}\blankline|comment}{0}
+\indexentry{0d@\textbf{Failed mindsets}: \newline\textit{Inside == trusted, outside == untrusted} \newline\textit{All-Prevent Defense} \newline\textit{Compliance-Driven Security} \newline\textit{Shiny object syndrome}\newline\blankline|comment}{0}
+\indexentry{0bb@\textbf{Defensible Security Architecture Life Cycle}: \newline \textbf{D}iscover \& \textbf{A}ssess, \textbf{R}edesign, \textbf{I}mplement, \textbf{O}perate \& \textbf{M}onitor\blankline|comment}{0}
+
+\indexentry{0z@\blankline|comment}{0}
+
+\indexentry{1a@\textbf{1 -- Journey Towards Zero Trust}!Course Overview|book{1}}{4-17}
+\indexentry{1a@\textbf{1 -- Journey Towards Zero Trust}!Defensible Security Architecture|book{1}}{18-23}
+\indexentry{1a@\textbf{1 -- Journey Towards Zero Trust}!Traditional SecArch Deficiencies|book{1}}{24-36}
+\indexentry{1a@\textbf{1 -- Journey Towards Zero Trust}!Winning Defensible Sec Strategies|book{1}}{37-48}
+\indexentry{1a@\textbf{1 -- Journey Towards Zero Trust}!Security Models|book{1}}{51-63}
+\indexentry{1a@\textbf{1 -- Journey Towards Zero Trust}!Threat, Vuln, Data Flow Analysis|book{1}}{64-75}
+\indexentry{1a@\textbf{1 -- Journey Towards Zero Trust}!Physical Security|book{1}}{78-89}
+\indexentry{1a@\textbf{1 -- Journey Towards Zero Trust}!Wireless|book{1}}{90-105}
+\indexentry{1a@\textbf{1 -- Journey Towards Zero Trust}!Private VLANs|book{1}}{126-136}
+\indexentry{1a@\textbf{1 -- Journey Towards Zero Trust}!Network Flow|book{1}}{137-152}
+
+\indexentry{1z@\blankline|comment}{0}
+
+\indexentry{2a@\textbf{2 -- Network Sec Architecture and Engineering}!Layer 3 Attacks and Mitigation|book{2}}{4-13}
+\indexentry{2a@\textbf{2 -- Network Sec Architecture and Engineering}!Switch and Router Best Practices|book{2}}{14-41}
+\indexentry{2a@\textbf{2 -- Network Sec Architecture and Engineering}!Securing SNMP|book{2}}{44-50}
+\indexentry{2a@\textbf{2 -- Network Sec Architecture and Engineering}!Securing NTP|book{2}}{51-56}
+\indexentry{2a@\textbf{2 -- Network Sec Architecture and Engineering}!Bogon Filtering|book{2}}{57-61}
+\indexentry{2a@\textbf{2 -- Network Sec Architecture and Engineering}!Blackholes and Darknets|book{2}}{62-67}
+\indexentry{2a@\textbf{2 -- Network Sec Architecture and Engineering}!IPv6|book{2}}{70-95}
+\indexentry{2a@\textbf{2 -- Network Sec Architecture and Engineering}!Securing IPv6|book{2}}{96-115}
+\indexentry{2a@\textbf{2 -- Network Sec Architecture and Engineering}!Segmentation|book{2}}{118-134}
+\indexentry{2a@\textbf{2 -- Network Sec Architecture and Engineering}!Web Proxy|book{2}}{135-158}
+\indexentry{2a@\textbf{2 -- Network Sec Architecture and Engineering}!SMTP Proxy|book{2}}{159-173}
+
+\indexentry{2z@\blankline|comment}{0}
+
+\indexentry{3a@\textbf{3 -- Network-Centric AppSec Architecture}!Next-Generation Firewall (NGFW)|book{3}}{4-23}
+\indexentry{3a@\textbf{3 -- Network-Centric AppSec Architecture}!Network Security Monitoring (NSM)|book{3}}{24-62}
+\indexentry{3a@\textbf{3 -- Network-Centric AppSec Architecture}!Network Intrusion Detection (NIDS)|book{3}}{65-85}
+\indexentry{3a@\textbf{3 -- Network-Centric AppSec Architecture}!Malware Detection|book{3}}{89-107}
+\indexentry{3a@\textbf{3 -- Network-Centric AppSec Architecture}!Remote Access|book{3}}{108-136}
+\indexentry{3a@\textbf{3 -- Network-Centric AppSec Architecture}!Distributed DoS (DDoS) Protection|book{3}}{137-153}
+\indexentry{3a@\textbf{3 -- Network-Centric AppSec Architecture}!Network Encryption|book{3}}{154-173}
+
+\indexentry{3z@\blankline|comment}{0}
+
+\indexentry{4a@\textbf{4 -- Data-Centric AppSec Architecture}!Data-Centric Security|book{4}}{4-9}
+\indexentry{4a@\textbf{4 -- Data-Centric AppSec Architecture}!Web Application Firewalls (WAF)|book{4}}{10-32}
+\indexentry{4a@\textbf{4 -- Data-Centric AppSec Architecture}!Database Monitoring and Controls|book{4}}{34-49}
+\indexentry{4a@\textbf{4 -- Data-Centric AppSec Architecture}!Access Controls|book{4}}{50-59}
+\indexentry{4a@\textbf{4 -- Data-Centric AppSec Architecture}!Data Encryption|book{4}}{60-73}
+\indexentry{4a@\textbf{4 -- Data-Centric AppSec Architecture}!File Classification|book{4}}{74-91}
+\indexentry{4a@\textbf{4 -- Data-Centric AppSec Architecture}!Data Loss Prevention (DLP)|book{4}}{94-105}
+\indexentry{4a@\textbf{4 -- Data-Centric AppSec Architecture}!Enterprise Data Control|book{4}}{106-125}
+\indexentry{4a@\textbf{4 -- Data-Centric AppSec Architecture}!Mobile Device Mgt (MDM)|book{4}}{126-139}
+\indexentry{4a@\textbf{4 -- Data-Centric AppSec Architecture}!Private Cloud Security|book{4}}{140-159}
+\indexentry{4a@\textbf{4 -- Data-Centric AppSec Architecture}!Public Cloud Challenges|book{4}}{160-168}
+\indexentry{4a@\textbf{4 -- Data-Centric AppSec Architecture}!Containers|book{4}}{169-180}
+
+\indexentry{4z@\blankline|comment}{0}
+
+\indexentry{5a@\textbf{5 -- Zero-Trust Architecture: Addressing the Adversaries Already in Our Networks}!Zero Trust Architecture|book{5}}{4-18}
+\indexentry{5a@\textbf{5 -- Zero-Trust Architecture: Addressing the Adversaries Already in Our Networks}!Credential Rotation|book{5}}{19-30}
+\indexentry{5a@\textbf{5 -- Zero-Trust Architecture: Addressing the Adversaries Already in Our Networks}!Securing Traffic|book{5}}{31-49}
+\indexentry{5a@\textbf{5 -- Zero-Trust Architecture: Addressing the Adversaries Already in Our Networks}!Host-Based Firewalls|book{5}}{52-57}
+\indexentry{5a@\textbf{5 -- Zero-Trust Architecture: Addressing the Adversaries Already in Our Networks}!Network Access Control (NAC)|book{5}}{58-74}
+\indexentry{5a@\textbf{5 -- Zero-Trust Architecture: Addressing the Adversaries Already in Our Networks}!Segmentation Gateways|book{5}}{75-86}
+\indexentry{5a@\textbf{5 -- Zero-Trust Architecture: Addressing the Adversaries Already in Our Networks}!Security Info and Event Mgt (SIEM)|book{5}}{87-93}
+\indexentry{5a@\textbf{5 -- Zero-Trust Architecture: Addressing the Adversaries Already in Our Networks}!Log Collection|book{5}}{96-118}
+\indexentry{5a@\textbf{5 -- Zero-Trust Architecture: Addressing the Adversaries Already in Our Networks}!Audit Policies|book{5}}{119-138}
+\indexentry{5a@\textbf{5 -- Zero-Trust Architecture: Addressing the Adversaries Already in Our Networks}!MITRE ATT\&CK Content Engr|book{5}}{139-162}
+\indexentry{5a@\textbf{5 -- Zero-Trust Architecture: Addressing the Adversaries Already in Our Networks}!Tripwires and Red Herring Def|book{5}}{165-184}
+
+\indexentry{5z@\blankline|comment}{0}
+

@@ -175,7 +175,6 @@ acs-*.bib
 *.ltjruby
 
 # makeidx
-*.idx
 *.ilg
 *.ind
 
