@@ -6,10 +6,10 @@
             "type": "shell",
             "command": "./build_latex.sh",
             "args": [
-                "${fileBasename}" // Pass the current file's name as an argument
+                "${fileBasename}"
             ],
             "group": "build",
-            "problemMatcher": "$latexworkshop",
+            "problemMatcher": [],
             "options": {
                 "cwd": "${workspaceFolder}"
             }
